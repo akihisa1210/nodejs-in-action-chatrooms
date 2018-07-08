@@ -10,5 +10,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/akihisa1210/nodejs-in-action-chatrooms.git"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-google": "^0.9.1"
   }
 }
