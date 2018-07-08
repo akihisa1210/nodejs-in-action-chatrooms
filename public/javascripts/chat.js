@@ -10,20 +10,20 @@ Chat.prototype.sendMessage = function(room, text) {
   this.socket.emit('message', message);
 };
 
-Chat.prototype.changeRoom = fucntion(room) {
+Chat.prototype.changeRoom = function(room) {
   this.socket.emit('join', {
     newRoom: room,
   });
 };
 
-Chat.prototype.processCommand = function(command) {
-  const words = command.split(' ');
+Chat.prototype.processCommand = function(text) {
+  const words = text.split(' ');
   const command = words[0]
     .substring(1, words[0].length)
     .toLowerCase();
   let message = false;
 
-  switch(command) {
+  switch (command) {
     case 'join':
       words.shift();
       const room = words.join(' ');
