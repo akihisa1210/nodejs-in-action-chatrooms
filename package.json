@@ -13,6 +13,12 @@
   },
   "devDependencies": {
     "eslint": "^5.0.1",
-    "eslint-config-google": "^0.9.1"
+    "eslint-config-google": "^0.9.1",
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^5.2.0",
+    "power-assert": "^1.6.0"
+  },
+  "directories": {
+    "test": "test/"
   }
 }
