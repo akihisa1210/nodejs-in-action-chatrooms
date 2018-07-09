@@ -58,7 +58,7 @@ $(document).ready(() => {
         }
       }
     }
-    $('$room-list div').click(() => {
+    $('#room-list div').click(() => {
       chatApp.processCommand(`/join ${$(this).text()}`);
       $('#send-message').focus();
     });
