@@ -39,7 +39,7 @@ $(document).ready(() => {
   });
 
   socket.on('joinResult', (message) => {
-    $('#room').text(result.room);
+    $('#room').text(message.room);
     $('#messages').append(divSystemContentElement('Room changed.'));
   });
 
