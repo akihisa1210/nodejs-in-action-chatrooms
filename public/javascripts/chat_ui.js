@@ -21,7 +21,7 @@ const processUserInput = (chatApp, socket) => {
     $('#messages').scrollTop($('#messages').prop('scrollHeight'));
   }
 
-  $('send-message').val('');
+  $('#send-message').val('');
 };
 
 const socket = io.connect();
@@ -44,15 +44,16 @@ $(document).ready(() => {
   });
 
   socket.on('message', (message) => {
-    const newElement = $('<div></div>').text(message.text);
+    let newElement = $('<div></div>').text(message.text);
     $('#messages').append(newElement);
   });
 
   socket.on('rooms', (rooms) => {
     $('#room-list').empty();
+    console.log(rooms);
     for (let room in rooms) {
       if ({}.hasOwnProperty.call(rooms, room)) {
-        room = room.substring(1, room.length);
+        console.log(room);
         if (room != '') {
           $('#room-list').append(divEscapedContentElement(room));
         }
